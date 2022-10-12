@@ -9,7 +9,7 @@ interface IFooterProps {}
 
 const Footer: FC<IFooterProps> = () => {
   return (
-    <Box  pb="10" bg="black.500" py="60px">
+    <Box  pb="10" bg="black.500" py="16">
       <UpperFooter />
       <SocialIcons />
       <BottomFooter />

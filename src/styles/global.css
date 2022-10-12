@@ -29,8 +29,8 @@
   position: relative;
 }
 .white_slider .slick-dots li {
-  height: 18px;
-  width: 18px;
+  height: 1.125rem;
+  width: 1.125rem;
 }
 
 .slick-slide:last-child {
@@ -38,24 +38,39 @@
 }
 
 @media (max-width: 768px) {
+  .big_slider ul.slick-dots {
+    top: -1rem;
+    position: relative;
+  }
+  .customer_slider ul.slick-dots {
+    top: 0;
+    position: relative;
+  }
   .white_slider ul.slick-dots {
-    top: -70px;
+    top: -4.375rem;
     position: relative;
   }
 
   .white_slider .slick-dots li {
-    height: 12px;
-    width: 12px;
+    height: 0.75rem;
+    width: 0.75rem;
   }
 
   ul.slick-dots {
-    top: -70px;
+    top: -5.375rem;
     position: relative;
   }
 
   .slick-dots .slick-active,
   .slick-dots li {
-    width: 15px;
-    height: 15px;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+@media (max-width: 1024px) {
+  .slick-dots .slick-active,
+  .slick-dots li {
+    width: 0.9375rem;
+    height: 0.9375rem;
   }
 }

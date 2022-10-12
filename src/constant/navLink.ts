@@ -1,7 +1,7 @@
 export const navlinks = [
   {
     label: 'STARTSEITE',
-    path: '/startseite',
+    path: '/',
   },
   {
     label: 'LUFTBALLONS',
@@ -17,11 +17,11 @@ export const navlinks = [
   },
   {
     label: 'GROßHANDEL',
-    path: '/großhandel',
+    path: '/grobhandels',
   },
 
   {
     label: 'KONTAKT',
-    path: '/kontakt',
+    path: '/contact',
   },
 ];

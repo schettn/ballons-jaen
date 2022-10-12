@@ -1,4 +1,4 @@
-import { HStack, VStack, Link as CLink, Grid } from '@chakra-ui/react';
+import { HStack, VStack, Link as CLink } from '@chakra-ui/react';
 import { navlinks } from 'constant/navLink';
 import { CONTAINER_MAX_WIDTH } from 'constant/sizes';
 import { FC } from 'react';
@@ -7,7 +7,7 @@ interface IBottomNavProps {}
 
 const BottomNav: FC<IBottomNavProps> = () => {
   return (
-    <VStack h={{ base: '14', lg: '20' }} bg="white" boxShadow="md" justify="center">
+    <VStack h={{ base: '14', lg: '20' }} bg="white" boxShadow="light" justify="center">
       <HStack
         gap={{ md: 6, lg: 8, '2xl': 10 }}
         maxW={CONTAINER_MAX_WIDTH}
@@ -28,7 +28,7 @@ const BottomNav: FC<IBottomNavProps> = () => {
               to={link.path}
               key={index}
               _hover={{ fontWeight: 'bold', transition: '0.2s ease-in' }}
-              fontSize={{ md: '15px', lg: '16px', xl: '18px', '2xl': '20px' }}
+              fontSize={{ md: 'sm', lg: '1rem', xl: '1.125rem', '2xl': 'md' }}
               transition="0.2s ease-in"
               color="brand.dark_gray">
               {link.label}

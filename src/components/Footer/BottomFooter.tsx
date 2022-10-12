@@ -6,10 +6,10 @@ interface IBottomFooterProps {}
 const BottomFooter: FC<IBottomFooterProps> = () => {
   return (
     <VStack gap="3">
-      <Text lineHeight="22px" fontSize="12px" textAlign="center" color="white" maxW="550px" px="4">
+      <Text lineHeight="6" fontSize="xs" textAlign="center" color="white" maxW="34.375rem" px="4">
         Durch unsere umfangreiche Auswahl, können Sie bei uns von einem einzelnen Ballon bis hin zur
         Festsaal-Dekoration alles bekommen. Ballons schaffen es wie nichts anderes, den Menschen ein
-        <Text mx="2" fontSize="20px" color="white" variant="cursive" as="span">
+        <Text mx="2" fontSize="md" color="white" variant="cursive" as="span">
           Lächeln
         </Text>{' '}
         ins Gesicht zu zaubern.

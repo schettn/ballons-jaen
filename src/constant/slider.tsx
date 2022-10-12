@@ -1,0 +1,120 @@
+import NextArrow from 'components/CustomSlider/NextArrow';
+import PrevArrow from 'components/CustomSlider/PrevArrow';
+import { Settings } from 'react-slick';
+
+export const settings: Settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+
+  responsive: [
+    {
+      breakpoint: 4000,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+      },
+    },
+
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+export const blogSliderSettings: Settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+
+  responsive: [
+    {
+      breakpoint: 4000,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        arrows: true,
+        nextArrow: <NextArrow out isBlack />,
+        prevArrow: <PrevArrow out isBlack />,
+      },
+    },
+
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
+export const sliderDummyData = [
+  {
+    image: '/images/home/slides/slide1.png',
+    date: '08. Februar 2022',
+    title: 'Frauenlauf Dekoration',
+    text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper',
+  },
+  {
+    image: '/images/home/slides/slide2.png',
+
+    date: '08. Februar 2022',
+    title: 'Frauenlauf Dekoration',
+    text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper',
+  },
+  {
+    image: '/images/home/slides/slide1.png',
+
+    date: '08. Februar 2022',
+    title: 'Frauenlauf Dekoration',
+    text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper',
+  },
+  {
+    image: '/images/home/slides/slide2.png',
+
+    date: '08. Februar 2022',
+    title: 'Frauenlauf Dekoration',
+    text: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper',
+  },
+];
+
+export const customerSliderSettings: Settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+
+  responsive: [
+    {
+      breakpoint: 4000,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+      },
+    },
+
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};

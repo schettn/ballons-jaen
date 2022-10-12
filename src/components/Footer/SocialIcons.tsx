@@ -6,7 +6,7 @@ interface ISocialIconsProps {}
 const SocialIcons: FC<ISocialIconsProps> = () => {
   return (
     <VStack py="12">
-      <HStack fontSize="25px" color="white" gap="3">
+      <HStack fontSize="lg" color="white" gap="3">
         {[
           {
             icon: '/images/footer/facebook.svg',

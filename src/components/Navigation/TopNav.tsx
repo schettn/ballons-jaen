@@ -29,12 +29,12 @@ const TopNav: FC<ITopNavProps> = () => {
   ];
 
   return (
-    <Flex h={{ sm: '80px', xl: '90px' }} align="center" px="8" justify="space-between" bg="#f4f4f4">
-      <Box w="250px" display={{ base: 'none', xl: 'block' }}></Box>
+    <Flex h={{ sm: 20, xl: 24 }} align="center" px="8" justify="space-between" bg="#f4f4f4">
+      <Box w="15.625rem" display={{ base: 'none', xl: 'block' }}></Box>
       <Box as="span" justifySelf="center">
         <Image
-          w={{ base: '320px', lg: '420px' }}
-          h={{ base: '30px', lg: '34px' }}
+          w={{ base: '20rem', lg: '26.25rem' }}
+          h={{ base: '1.875rem', lg: '2.125rem' }}
           src="/images/red_logo.png"
           alt="logo"
         />
@@ -42,12 +42,12 @@ const TopNav: FC<ITopNavProps> = () => {
       <HStack gap="2" justifySelf="end">
         {iconsBtn.map((iconBtn, index) => {
           return (
-            <Box fontSize={{ md: '24px', xl: '30px' }} key={index}>
+            <Box fontSize={{ base: 'lg', xl: 'xl' }} key={index}>
               {iconBtn.icon}
             </Box>
           );
         })}
-        <Text fontSize={{ md: '16px', xl: '20px' }}> € 0.00 *</Text>
+        <Text fontSize={{ base: 'sm', xl: 'md' }}> € 0.00 *</Text>
       </HStack>
     </Flex>
   );

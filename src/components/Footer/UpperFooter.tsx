@@ -25,11 +25,11 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
         gridTemplateColumns={{ sm: 'repeat(2,1fr)', md: 'repeat(4,1fr)' }}
         gap={{ base: 4, md: 6, lg: 8 }}>
         <Stack>
-          <Heading mb={{ base: '20px', md: '30px', lg: '40px' }} fontWeight="bold" fontSize="20px">
+          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
             UNTERNEHMEN
           </Heading>
 
-          <Text fontSize="15px" pl={{ base: 4, sm: 0 }}>
+          <Text fontSize="sm" pl={{ base: 4, sm: 0 }}>
             Taborstraße 98 <br />
             1020 Wien <br />
             Austria <br />
@@ -40,7 +40,7 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
         </Stack>
         <Divider opacity="0.3" display={{ base: 'block', sm: 'none' }} />
         <Stack>
-          <Heading mb={{ base: '20px', md: '30px', lg: '40px' }} fontWeight="bold" fontSize="20px">
+          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
             ÖFFNUNGSZEITEN
           </Heading>
 
@@ -73,20 +73,13 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
                 </Tr>
               </Tbody>
             </Table>
-            {/* <Stack spacing={8} align="start">
-                <Text fontSize="15px">Mo - Do</Text>
-                <Text fontSize="15px">Freitag</Text>
-                <Text fontSize="15px">Sa - So</Text>
-              </Stack>
-              <Stack spacing={8} align="start">
-
-              </Stack> */}
+            
           </Flex>
         </Stack>
         <Divider opacity="0.3" display={{ base: 'block', sm: 'none' }} />
 
         <Stack>
-          <Heading mb={{ base: '20px', md: '30px', lg: '40px' }} fontWeight="bold" fontSize="20px">
+          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
             KATEGORIEN
           </Heading>
           <Grid gap="2" gridTemplateColumns={{ base: 'repeat(2,1fr)', md: '1fr' }}>
@@ -110,7 +103,7 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
                 label: 'Partyartikel',
               },
             ].map((item) => (
-              <Text fontSize="15px" key={item.label}>
+              <Text fontSize="sm" key={item.label}>
                 {item.label}
               </Text>
             ))}
@@ -119,7 +112,7 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
         <Divider opacity="0.3" display={{ base: 'block', sm: 'none' }} />
 
         <Stack>
-          <Heading mb={{ base: '20px', md: '30px', lg: '40px' }} fontWeight="bold" fontSize="20px">
+          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
             LINKS
           </Heading>
           <Grid gap="2" gridTemplateColumns={{ base: 'repeat(2,1fr)', md: '1fr' }}>
@@ -137,7 +130,7 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
                 label: 'Impressum',
               },
             ].map((item) => (
-              <Text fontSize="15px" key={item.label}>
+              <Text fontSize="sm" key={item.label}>
                 {item.label}
               </Text>
             ))}
