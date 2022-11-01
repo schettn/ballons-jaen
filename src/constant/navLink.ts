@@ -4,24 +4,26 @@ export const navlinks = [
     path: '/',
   },
   {
-    label: 'LUFTBALLONS',
+    label: 'LUFTGEFÜLLTE BALLONS',
     path: '/luftballons',
   },
   {
-    label: 'DEKORATION',
-    path: '/dekorations',
+    label: 'DEKORATIONEN',
+    path: '/dekoration',
   },
   {
-    label: 'BALLONZUBEHÖR',
+    label: 'PARTYARTIKEL',
     path: '/ballonzubehör',
   },
   {
-    label: 'GROßHANDEL',
-    path: '/grobhandels',
+    label: 'GROẞHANDEL',
+    path: '/grosshandel',
+  }, {
+    label: 'NEWS',
+    path: '/news',
   },
-
   {
     label: 'KONTAKT',
-    path: '/contact',
+    path: '/kontakt',
   },
 ];

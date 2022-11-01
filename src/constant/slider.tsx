@@ -1,6 +1,7 @@
-import NextArrow from 'components/CustomSlider/NextArrow';
-import PrevArrow from 'components/CustomSlider/PrevArrow';
+import NextArrow from '../components/CustomSlider/NextArrow';
+import PrevArrow from '../components/CustomSlider/PrevArrow';
 import { Settings } from 'react-slick';
+import React from 'react';
 
 export const settings: Settings = {
   dots: true,

@@ -2,7 +2,7 @@ import { Box, Text } from '@chakra-ui/react';
 import WhiteDesktopSlider from './WhiteDesktopSlider';
 import WhiteMobileSlider from './WhiteMobileSlider';
 import { FC } from 'react';
-import { INewsSlides } from 'types/commonTypes';
+import { INewsSlides } from '../../types/commonTypes';
 
 interface INewsSlidesProps {
   slides: INewsSlides[];

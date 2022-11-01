@@ -8,11 +8,11 @@ import {
   Link as CLink,
   Divider,
 } from '@chakra-ui/react';
-import { navlinks } from 'constant/navLink';
+import { navlinks } from '../../../constant/navLink';
 import { FC } from 'react';
 import { AiOutlineShoppingCart, AiOutlineUser } from 'react-icons/ai';
 import { IoCloseOutline, IoMenuOutline } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
 interface IMobileNavProps {}
 

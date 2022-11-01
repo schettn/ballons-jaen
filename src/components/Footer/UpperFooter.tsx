@@ -12,7 +12,7 @@ import {
   Text,
   Box,
 } from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from 'constant/sizes';
+import { CONTAINER_MAX_WIDTH } from '../../constant/sizes';
 import { FC } from 'react';
 
 interface IUpperFooterProps {}
