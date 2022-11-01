@@ -1,8 +1,8 @@
 import { HStack, VStack, Link as CLink } from '@chakra-ui/react';
-import { navlinks } from 'constant/navLink';
-import { CONTAINER_MAX_WIDTH } from 'constant/sizes';
+import { navlinks } from '../../constant/navLink';
+import { CONTAINER_MAX_WIDTH } from '../../constant/sizes';
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 interface IBottomNavProps {}
 
 const BottomNav: FC<IBottomNavProps> = () => {

@@ -1,7 +1,7 @@
 import { Container, Grid } from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from 'constant/sizes';
+import { CONTAINER_MAX_WIDTH } from '../../constant/sizes';
 import { FC } from 'react';
-import { ICardData } from 'types/commonTypes';
+import { ICardData } from '../../types/commonTypes';
 import { FourCardItem } from './FourCardItem';
 
 interface IFourCardProps {

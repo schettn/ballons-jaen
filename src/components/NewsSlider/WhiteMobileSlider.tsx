@@ -9,11 +9,11 @@ import {
   VStack,
   Image,
 } from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from 'constant/sizes';
-import { settings } from 'constant/slider';
+import { CONTAINER_MAX_WIDTH } from '../../constant/sizes';
+import { settings } from '../../constant/slider';
 import { FC } from 'react';
 import Slider from 'react-slick';
-import { INewsSlides } from 'types/commonTypes';
+import { INewsSlides } from '../../types/commonTypes';
 
 interface IWhiteMobileSliderProps {
   slides: INewsSlides[];

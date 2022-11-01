@@ -1,5 +1,5 @@
 import { GridItem } from '@chakra-ui/react';
-import CardWithImageBackground from 'components/CardWithImageBackground';
+import CardWithImageBackground from '../CardWithImageBackground';
 
 export const FourCardItem = ({ title, image }: { title?: string; image: string }) => {
   return (
