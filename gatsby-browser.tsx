@@ -16,10 +16,10 @@ import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/900.css';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+//import 'slick-carousel/slick/slick.css';
+//import 'slick-carousel/slick/slick-theme.css';
 
-import './src/styles/global.css';
+//import './src/styles/global.css';
 
 import { GatsbyBrowser } from 'gatsby';
 import { RootWrapper } from './src/chakra/RootWrapper';

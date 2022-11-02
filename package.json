@@ -5,10 +5,15 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.11",
     "@chakra-ui/react": "^2.3.6",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/poppins": "^4.5.10",
+    "@react-icons/all-files": "^4.1.0",
+    "@snek-at/gatsby-theme-shopify": "^1.7.13",
+    "@snek-at/uikit": "^1.1.0",
+    "chakra-react-select": "^4.4.0",
     "framer-motion": "^7.6.3",
     "gatsby": "^4.24.6",
     "gatsby-plugin-image": "^2.24.0",
@@ -20,6 +25,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.6.0",
+    "react-images-viewer": "^1.7.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },
