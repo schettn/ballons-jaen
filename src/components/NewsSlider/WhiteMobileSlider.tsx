@@ -1,23 +1,23 @@
 import {
+  Box,
+  Button,
   Container,
   Grid,
-  Stack,
   Heading,
-  Button,
-  Box,
+  Image,
+  Stack,
   Text,
   VStack,
-  Image,
-} from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from '../../constant/sizes';
-import { settings } from '../../constant/slider';
-import { FC } from 'react';
-import Slider from 'react-slick';
-import { INewsSlides } from '../../types/commonTypes';
+} from "@chakra-ui/react"
+import { settings } from "../../constant/slider"
+import { FC } from "react"
+import Slider from "react-slick"
+import { INewsSlides } from "../../types/commonTypes"
+import { CONTAINER_MAX_WIDTH } from "../../constant/sizes"
 
 interface IWhiteMobileSliderProps {
-  slides: INewsSlides[];
-  withoutImageVariant?: boolean;
+  slides: INewsSlides[]
+  withoutImageVariant?: boolean
 }
 
 const WhiteMobileSlider: FC<IWhiteMobileSliderProps> = ({
@@ -43,15 +43,17 @@ const WhiteMobileSlider: FC<IWhiteMobileSliderProps> = ({
                 flex="1"
                 pt="20"
                 align="center"
-                justify="center">
+                justify="center"
+              >
                 <Grid flex="1" placeItems="center" pos="relative" bg="red">
                   <Box
                     pos="absolute"
                     top="-40"
                     overflow="hidden"
-                    boxSize={{ base: '9.375rem' }}
+                    boxSize={{ base: "9.375rem" }}
                     bg="gray.800"
-                    borderRadius="full">
+                    borderRadius="full"
+                  >
                     <Image src={slide.image} />
                   </Box>
                 </Grid>
@@ -59,13 +61,17 @@ const WhiteMobileSlider: FC<IWhiteMobileSliderProps> = ({
                   <Text fontSize="sm" color="gray.700">
                     {slide.date}
                   </Text>
-                  <Heading color="black.500" fontSize="md" fontWeight="semibold">
+                  <Heading
+                    color="black.500"
+                    fontSize="md"
+                    fontWeight="semibold"
+                  >
                     {slide.title}
                   </Heading>
                   <Text color="black.500" fontSize="sm">
                     {slide.text}
                   </Text>
-                  <Button size={{ base: 'sm', md: 'md' }} variant="outline">
+                  <Button size={{ base: "sm", md: "md" }} variant="outline">
                     Mehr anzeigen
                   </Button>
                 </VStack>
@@ -80,14 +86,15 @@ const WhiteMobileSlider: FC<IWhiteMobileSliderProps> = ({
                   bg="white"
                   px="8"
                   pt="8"
-                  pb="20">
+                  pb="20"
+                >
                   <Text fontSize="sm" fontStyle="italic" fontWeight="thin">
                     08.02.2022
                   </Text>
                   <Heading fontSize="md">Luftblasen Bouquets</Heading>
                   <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero
-                    risus semper....
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Faucibus in libero risus semper....
                   </Text>
                   <Box>
                     <Button size="sm" variant="outline">
@@ -101,6 +108,6 @@ const WhiteMobileSlider: FC<IWhiteMobileSliderProps> = ({
         ))}
       </Slider>
     </Container>
-  );
-};
-export default WhiteMobileSlider;
+  )
+}
+export default WhiteMobileSlider

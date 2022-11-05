@@ -9,29 +9,29 @@ import {
   Tag,
   Text,
   VStack,
-} from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from '../../../constant/sizes';
-import { blogSliderSettings } from '../../../constant/slider';
-import { FC } from 'react';
-import Slider from 'react-slick';
-import { BsFillShareFill } from 'react-icons/bs';
+} from "@chakra-ui/react"
+import { FC } from "react"
+import { BsFillShareFill } from "react-icons/bs"
+import Slider from "react-slick"
+import { CONTAINER_MAX_WIDTH } from "../../../constant/sizes"
+import { blogSliderSettings } from "../../../constant/slider"
 interface IBlogSliderProps {}
 
 const BlogSlider: FC<IBlogSliderProps> = () => {
   const sliderImages = [
-    '/images/blog_page/sliderImg1.png',
-    '/images/blog_page/sliderImg2.png',
-    '/images/blog_page/sliderImg3.png',
-    '/images/blog_page/sliderImg4.png',
-    '/images/blog_page/sliderImg1.png',
-    '/images/blog_page/sliderImg2.png',
-    '/images/blog_page/sliderImg3.png',
-    '/images/blog_page/sliderImg4.png',
-    '/images/blog_page/sliderImg1.png',
-    '/images/blog_page/sliderImg2.png',
-    '/images/blog_page/sliderImg3.png',
-    '/images/blog_page/sliderImg4.png',
-  ];
+    "/images/blog_page/sliderImg1.png",
+    "/images/blog_page/sliderImg2.png",
+    "/images/blog_page/sliderImg3.png",
+    "/images/blog_page/sliderImg4.png",
+    "/images/blog_page/sliderImg1.png",
+    "/images/blog_page/sliderImg2.png",
+    "/images/blog_page/sliderImg3.png",
+    "/images/blog_page/sliderImg4.png",
+    "/images/blog_page/sliderImg1.png",
+    "/images/blog_page/sliderImg2.png",
+    "/images/blog_page/sliderImg3.png",
+    "/images/blog_page/sliderImg4.png",
+  ]
 
   return (
     <Box
@@ -41,11 +41,15 @@ const BlogSlider: FC<IBlogSliderProps> = () => {
       mt="24"
       py="8"
       bgImage={{
-        base: '/images/blog_page/slider_mobile_bg.svg',
-        md: '/images/blog_page/sliderBg.svg',
-      }}>
+        base: "/images/blog_page/slider_mobile_bg.svg",
+        md: "/images/blog_page/sliderBg.svg",
+      }}
+    >
       <Container maxW={CONTAINER_MAX_WIDTH}>
-        <Container maxW={CONTAINER_MAX_WIDTH} display={{ base: 'none', md: 'block' }}>
+        <Container
+          maxW={CONTAINER_MAX_WIDTH}
+          display={{ base: "none", md: "block" }}
+        >
           <Slider {...blogSliderSettings}>
             {sliderImages.map((image, index) => (
               <Box key={index}>
@@ -54,7 +58,8 @@ const BlogSlider: FC<IBlogSliderProps> = () => {
                   mb="8 !important"
                   borderRadius="xl"
                   overflow="hidden"
-                  boxShadow="dark">
+                  boxShadow="dark"
+                >
                   <Image src={image} alt="slider" w="full" />
                 </Box>
               </Box>
@@ -66,24 +71,26 @@ const BlogSlider: FC<IBlogSliderProps> = () => {
           <Box
             pos="relative"
             top="12"
-            display={{ base: 'block', md: 'none' }}
+            display={{ base: "block", md: "none" }}
             mb="8"
             bg="red"
             w="full"
             borderRadius="md"
             overflow="hidden"
-            boxShadow="dark">
+            boxShadow="dark"
+          >
             <Image w="100%" src="/images/blog_page/slider_mobile_image.png" />
           </Box>
         </Box>
         <Text size="b2012" textAlign="center" py={{ base: 16, md: 8, xl: 16 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper
-          Lorem ipsum dolor sit amet, cipiscing elit. Faucibus in liber
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in
+          libero risus semper Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Faucibus in libero risus semper Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Faucibus in libero risus semper Lorem
+          ipsum dolor sit amet, cipiscing elit. Faucibus in liber
         </Text>
 
-        <VStack display={{ base: 'flex', md: 'none' }}>
+        <VStack display={{ base: "flex", md: "none" }}>
           <Button size="sm">
             <Flex align="center" gap="2">
               <BsFillShareFill />
@@ -92,14 +99,14 @@ const BlogSlider: FC<IBlogSliderProps> = () => {
           </Button>
         </VStack>
 
-        <Stack align="end" display={{ base: 'none', md: 'flex' }}>
+        <Stack align="end" display={{ base: "none", md: "flex" }}>
           <HStack mb="2">
             <Tag variant="normal">Helium</Tag>
             <Tag variant="normal">Team</Tag>
           </HStack>
           <Box>
             <Text size="b2012" textAlign="end">
-              Von{' '}
+              Von{" "}
               <Text as="span" size="b2012" fontWeight="bold" color="gray.700">
                 Nikolai Doe
               </Text>
@@ -111,6 +118,6 @@ const BlogSlider: FC<IBlogSliderProps> = () => {
         </Stack>
       </Container>
     </Box>
-  );
-};
-export default BlogSlider;
+  )
+}
+export default BlogSlider
