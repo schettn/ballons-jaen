@@ -4,7 +4,7 @@ import theme from "../styles/theme"
 
 export const RootWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider resetCSS={true} theme={theme}>
       <Fonts />
       {children}
     </ChakraProvider>
