@@ -28,10 +28,10 @@ export const settings: Settings = {
 const DekorationenHero: FC<IDekorationenHeroProps> = () => {
   const slides = [
     {
-      image: "images/decorationen/slider/slider_image.png",
+      image: "/images/decorationen/slider/slider_image.png",
     },
     {
-      image: "images/decorationen/slider/slider_image.png",
+      image: "/images/decorationen/slider/slider_image.png",
     },
   ]
 
@@ -95,7 +95,7 @@ const DekorationenHero: FC<IDekorationenHeroProps> = () => {
           </Container>
         </Box>
         <Image
-          src="images/decorationen/dekorationen_hero_bg.svg"
+          src="/images/decorationen/dekorationen_hero_bg.svg"
           alt="decorationen"
         />
       </Stack>
