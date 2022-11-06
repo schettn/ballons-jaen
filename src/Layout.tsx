@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react"
 import React from "react"
 
-import Navigation from "./components/Navigation/Navigation"
 import Footer from "./components/Footer/Footer"
+import Navigation from "./components/Navigation/Navigation"
 import ScrollToTop from "./components/ScrollTop"
 
 export interface LayoutProps {

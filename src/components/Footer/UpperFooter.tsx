@@ -1,19 +1,20 @@
 import {
+  Box,
   Container,
-  Grid,
-  Stack,
-  Heading,
   Divider,
   Flex,
+  Grid,
+  Heading,
+  Link,
+  Stack,
   Table,
   Tbody,
-  Tr,
   Td,
   Text,
-  Box,
-} from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from '../../constant/sizes';
-import { FC } from 'react';
+  Tr,
+} from "@chakra-ui/react"
+import { FC } from "react"
+import { CONTAINER_MAX_WIDTH } from "../../constant/sizes"
 
 interface IUpperFooterProps {}
 
@@ -22,10 +23,15 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
     <Container color="white" maxW={CONTAINER_MAX_WIDTH}>
       <Grid
         px="4"
-        gridTemplateColumns={{ sm: 'repeat(2,1fr)', md: 'repeat(4,1fr)' }}
-        gap={{ base: 4, md: 6, lg: 8 }}>
+        gridTemplateColumns={{ sm: "repeat(2,1fr)", md: "repeat(4,1fr)" }}
+        gap={{ base: 4, md: 6, lg: 8 }}
+      >
         <Stack>
-          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
+          <Heading
+            mb={{ base: "5", md: "8", lg: "10" }}
+            fontWeight="bold"
+            fontSize="md"
+          >
             UNTERNEHMEN
           </Heading>
 
@@ -34,13 +40,19 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
             1020 Wien <br />
             Austria <br />
             <br />
-            +43 121 634 25 <br />
-            office@ballons-ballons.com
+            <Link href="tel:+43 121 634 25">+43 121 634 25</Link> <br />
+            <Link href="mailto:office@ballons-ballons.com">
+              office@ballons-ballons.com
+            </Link>
           </Text>
         </Stack>
-        <Divider opacity="0.3" display={{ base: 'block', sm: 'none' }} />
+        <Divider opacity="0.3" display={{ base: "block", sm: "none" }} />
         <Stack>
-          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
+          <Heading
+            mb={{ base: "5", md: "8", lg: "10" }}
+            fontWeight="bold"
+            fontSize="md"
+          >
             ÖFFNUNGSZEITEN
           </Heading>
 
@@ -73,64 +85,82 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
                 </Tr>
               </Tbody>
             </Table>
-            
           </Flex>
         </Stack>
-        <Divider opacity="0.3" display={{ base: 'block', sm: 'none' }} />
+        <Divider opacity="0.3" display={{ base: "block", sm: "none" }} />
 
         <Stack>
-          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
+          <Heading
+            mb={{ base: "5", md: "8", lg: "10" }}
+            fontWeight="bold"
+            fontSize="md"
+          >
             KATEGORIEN
           </Heading>
-          <Grid gap="2" gridTemplateColumns={{ base: 'repeat(2,1fr)', md: '1fr' }}>
+          <Grid
+            gap="2"
+            gridTemplateColumns={{ base: "repeat(2,1fr)", md: "1fr" }}
+          >
             {[
               {
-                label: 'Großhandel',
+                label: "Großhandel",
               },
               {
-                label: 'Luftballons',
+                label: "Luftballons",
               },
               {
-                label: 'Ballongas',
+                label: "Ballongas",
               },
               {
-                label: 'Bubbles',
+                label: "Bubbles",
               },
               {
-                label: 'Pinatas',
+                label: "Pinatas",
               },
               {
-                label: 'Partyartikel',
+                label: "Partyartikel",
               },
-            ].map((item) => (
+            ].map(item => (
               <Text fontSize="sm" key={item.label}>
                 {item.label}
               </Text>
             ))}
           </Grid>
         </Stack>
-        <Divider opacity="0.3" display={{ base: 'block', sm: 'none' }} />
+        <Divider opacity="0.3" display={{ base: "block", sm: "none" }} />
 
         <Stack>
-          <Heading mb={{ base: '5', md: '8', lg: '10' }} fontWeight="bold" fontSize="md">
+          <Heading
+            mb={{ base: "5", md: "8", lg: "10" }}
+            fontWeight="bold"
+            fontSize="md"
+          >
             LINKS
           </Heading>
-          <Grid gap="2" gridTemplateColumns={{ base: 'repeat(2,1fr)', md: '1fr' }}>
+          <Grid
+            gap="2"
+            gridTemplateColumns={{ base: "repeat(2,1fr)", md: "1fr" }}
+          >
             {[
               {
-                label: 'Kontakt',
+                label: "Kontakt",
               },
               {
-                label: 'AGB',
+                label: "AGB",
               },
               {
-                label: 'Datenschutz',
+                label: "Datenschutz",
               },
               {
-                label: 'Impressum',
+                label: "Impressum",
               },
-            ].map((item) => (
-              <Text fontSize="sm" key={item.label}>
+            ].map(item => (
+              <Text
+                fontSize="sm"
+                _hover={{ textDecor: "underline" }}
+                cursor="pointer"
+                key={item.label}
+              >
                 {item.label}
               </Text>
             ))}
@@ -138,6 +168,6 @@ const UpperFooter: FC<IUpperFooterProps> = () => {
         </Stack>
       </Grid>
     </Container>
-  );
-};
-export default UpperFooter;
+  )
+}
+export default UpperFooter

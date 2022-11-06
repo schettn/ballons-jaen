@@ -2,6 +2,9 @@
   background: #e6e8e5;
   border-radius: 50%;
 }
+.slick-dots li:hover {
+  background: #f37e7e;
+}
 
 .slick-dots .slick-active {
   background: #e53e3e;

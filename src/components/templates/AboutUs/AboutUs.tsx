@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import AboutBallons from './AboutBallons';
-import AboutHeroSection from './AboutHeroSection';
-import OurCustomers from './OurCustomers';
-import OurTeam from './OurTeam/OurTeam';
+import { FC } from "react"
+import AboutBallons from "./AboutBallons"
+import AboutHeroSection from "./AboutHeroSection"
+import OurCustomers from "./OurCustomers"
+import OurTeam from "./OurTeam/OurTeam"
 
 interface IAboutUsProps {}
 
@@ -14,6 +14,6 @@ const AboutUs: FC<IAboutUsProps> = ({}) => {
       <OurCustomers />
       <OurTeam />
     </>
-  );
-};
-export default AboutUs;
+  )
+}
+export default AboutUs

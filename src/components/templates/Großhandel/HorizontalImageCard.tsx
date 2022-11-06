@@ -1,22 +1,40 @@
-import { Box, Button, Flex, Grid, Heading, Image, Stack, Text } from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from '../../../constant/sizes';
-import { FC } from 'react';
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react"
+import { FC } from "react"
+import { CONTAINER_MAX_WIDTH } from "../../../constant/sizes"
 
 interface IHorizontalImageCardProps {
   cardData: {
-    tag: string;
-    cursiveTitle: string;
-    title: string;
-    leftCrusive: boolean;
-    description: string;
-    buttonText: string;
-    imgUrl: string;
-    imageLeft: boolean;
-  };
+    tag: string
+    cursiveTitle: string
+    title: string
+    leftCrusive: boolean
+    description: string
+    buttonText: string
+    imgUrl: string
+    imageLeft: boolean
+  }
 }
 
 const HorizontalImageCard: FC<IHorizontalImageCardProps> = ({
-  cardData: { tag, cursiveTitle, title, leftCrusive, description, buttonText, imgUrl, imageLeft },
+  cardData: {
+    tag,
+    cursiveTitle,
+    title,
+    leftCrusive,
+    description,
+    buttonText,
+    imgUrl,
+    imageLeft,
+  },
 }) => {
   return (
     <Flex
@@ -24,12 +42,14 @@ const HorizontalImageCard: FC<IHorizontalImageCardProps> = ({
       borderRadius="xl"
       bg="white"
       boxShadow="dark"
-      flexDir={{ base: 'column', md: imageLeft ? 'row' : 'row-reverse' }}>
+      flexDir={{ base: "column", md: imageLeft ? "row" : "row-reverse" }}
+    >
       <Grid
         borderRadius="xl"
         overflow="hidden"
         flex="1"
-        maxH={{ base: '120px', sm: '240px', md: '400px' }}>
+        maxH={{ base: "120px", sm: "240px", md: "400px" }}
+      >
         <Image src={imgUrl} h="full" w="full" />
       </Grid>
       <Stack
@@ -39,15 +59,17 @@ const HorizontalImageCard: FC<IHorizontalImageCardProps> = ({
         px="10"
         justify="center"
         py="6"
-        align={{ base: 'center', md: 'start' }}>
+        align={{ base: "center", md: "start" }}
+      >
         <Heading
           fontSize="md"
           fontWeight="semibold"
           textTransform="uppercase"
-          display={{ base: 'none', md: 'block' }}>
+          display={{ base: "none", md: "block" }}
+        >
           {tag}
         </Heading>
-        <Flex gap="4" flexDir={leftCrusive ? 'row-reverse' : 'row'}>
+        <Flex gap="4" flexDir={leftCrusive ? "row-reverse" : "row"}>
           <Heading size="h5020" as="span" fontWeight="semibold">
             {title}
           </Heading>
@@ -55,16 +77,24 @@ const HorizontalImageCard: FC<IHorizontalImageCardProps> = ({
             {cursiveTitle}
           </Text>
         </Flex>
-        <Text variant="light" size="b2012" textAlign={{ base: 'center', md: 'start' }}>
+        <Text
+          variant="light"
+          size="b2012"
+          textAlign={{ base: "center", md: "start" }}
+        >
           {description}
         </Text>
         <Box>
-          <Button mt={{ base: '0', md: '4' }} size={{ base: 'sm', lg: 'md' }} variant="outline">
+          <Button
+            mt={{ base: "0", md: "4" }}
+            size={{ base: "sm", lg: "md" }}
+            variant="outline"
+          >
             {buttonText}
           </Button>
         </Box>
       </Stack>
     </Flex>
-  );
-};
-export default HorizontalImageCard;
+  )
+}
+export default HorizontalImageCard

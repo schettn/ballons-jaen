@@ -11,9 +11,9 @@ import {
   Tag,
   Text,
   VStack,
-} from '@chakra-ui/react';
-import { CONTAINER_MAX_WIDTH } from '../../../constant/sizes';
-import { FC } from 'react';
+} from "@chakra-ui/react"
+import { FC } from "react"
+import { CONTAINER_MAX_WIDTH } from "../../../constant/sizes"
 
 interface IBlogOverviewHeroProps {}
 
@@ -21,22 +21,29 @@ const BlogOverviewHero: FC<IBlogOverviewHeroProps> = () => {
   return (
     <Box
       bgImage={{
-        base: '/images/blog_overview/mobile_hero_bg.svg',
-        md: '/images/blog_overview/hero_bg.svg',
+        base: "/images/blog_overview/mobile_hero_bg.svg",
+        md: "/images/blog_overview/hero_bg.svg",
       }}
       pt={{ base: 4, md: 32 }}
       pb="32"
-      bgPos={{ base: 'top 2rem left 0' }}
+      bgPos={{ base: "top 2rem left 0" }}
       bgRepeat="no-repeat"
-      bgSize={{ base: 'contain', md: 'cover' }}>
+      bgSize={{ base: "contain", md: "cover" }}
+    >
       <Container maxW={CONTAINER_MAX_WIDTH}>
         <VStack>
           <Flex
-            mb={{ base: '25%', md: '5%' }}
+            mb={{ base: "25%", md: "5%" }}
             gap={{ base: 2, md: 4 }}
-            flexDir={{ base: 'column', md: 'row' }}
-            align="center">
-            <Heading size="h6020" as="span" fontWeight="semibold" whiteSpace="nowrap">
+            flexDir={{ base: "column", md: "row" }}
+            align="center"
+          >
+            <Heading
+              size="h6020"
+              as="span"
+              fontWeight="semibold"
+              whiteSpace="nowrap"
+            >
               Wissenswertes über
             </Heading>
             <Text
@@ -44,11 +51,12 @@ const BlogOverviewHero: FC<IBlogOverviewHeroProps> = () => {
               as="span"
               variant="cursive"
               size="80"
-              display={{ base: 'none', md: 'block' }}>
+              display={{ base: "none", md: "block" }}
+            >
               Ballons & Ballons
             </Text>
             <Image
-              display={{ base: 'block', md: 'none' }}
+              display={{ base: "block", md: "none" }}
               src="/images/red_logo.png"
               w="15.625rem"
             />
@@ -59,12 +67,14 @@ const BlogOverviewHero: FC<IBlogOverviewHeroProps> = () => {
           borderRadius="xl"
           bg="white"
           boxShadow="dark"
-          flexDir={{ base: 'column', md: 'row' }}>
+          flexDir={{ base: "column", md: "row" }}
+        >
           <Grid
             borderRadius="xl"
             overflow="hidden"
             flex="1"
-            maxH={{ base: '200px', sm: '300px', md: '600px' }}>
+            maxH={{ base: "200px", sm: "300px", md: "600px" }}
+          >
             <Image src="/images/blog_overview/blogHero.png" h="full" w="full" />
           </Grid>
           <Stack
@@ -73,30 +83,36 @@ const BlogOverviewHero: FC<IBlogOverviewHeroProps> = () => {
             spacing="0"
             px={{ base: 4, md: 6, xl: 10 }}
             justify="center"
-            py="6">
+            py="6"
+          >
             <HStack mb="2">
               <Tag variant="normal">Helium</Tag>
               <Tag variant="normal">Team</Tag>
             </HStack>
             <Heading size="h3015">Alles Rund ums Helium</Heading>
             <Text variant="light" size="b2012">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus
-              semper Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero
-              risus semper
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
+              in libero risus semper Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Faucibus in libero risus semper
               <br /> <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus
-              semper
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
+              in libero risus semper
             </Text>
             <Flex justify="space-between" w="full" mt="4 !important">
               <Box>
-                <Button variant="outline" size={{ base: 'sm', lg: 'md' }}>
+                <Button variant="outline" size={{ base: "sm", lg: "md" }}>
                   Weiterlesen
                 </Button>
               </Box>
               <Box>
                 <Text size="b2012" textAlign="end">
-                  Von{' '}
-                  <Text as="span" size="b2012" fontWeight="bold" color="gray.700">
+                  Von{" "}
+                  <Text
+                    as="span"
+                    size="b2012"
+                    fontWeight="bold"
+                    color="gray.700"
+                  >
                     Nikolai Doe
                   </Text>
                 </Text>
@@ -109,6 +125,6 @@ const BlogOverviewHero: FC<IBlogOverviewHeroProps> = () => {
         </Flex>
       </Container>
     </Box>
-  );
-};
-export default BlogOverviewHero;
+  )
+}
+export default BlogOverviewHero

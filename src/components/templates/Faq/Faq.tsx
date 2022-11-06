@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import FaqBallons from './FaqBallons';
-import FaqQuestionAnswer from './FaqQuestionAnswer';
-import HeroFaq from './HeroFaq';
+import { FC } from "react"
+import FaqBallons from "./FaqBallons"
+import FaqQuestionAnswer from "./FaqQuestionAnswer"
+import HeroFaq from "./HeroFaq"
 
 interface IFaqProps {}
 
@@ -12,6 +12,6 @@ const Faq: FC<IFaqProps> = () => {
       <FaqQuestionAnswer />
       <FaqBallons />
     </>
-  );
-};
-export default Faq;
+  )
+}
+export default Faq

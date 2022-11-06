@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, useEffect } from "react"
+import { useEffect } from "react"
 
 export default function ScrollToTop({
   children,
@@ -16,7 +16,5 @@ export default function ScrollToTop({
     window.scrollTo(0, 0)
   }, [pathname])
 
-  return <>
-    {children}
-  </>
+  return <>{children}</>
 }
