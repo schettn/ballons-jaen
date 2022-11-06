@@ -46,7 +46,7 @@ const theme = extendTheme(
 
     fontSizes: {
       xs: "0.75rem", // 12px
-      sm: ".9375rem", // 15px
+      sm: "0.938rem", // 15px
       md: "1.25rem", // 20px
       lg: "1.5rem", // 24px
       xl: "1.875rem", // 30px
@@ -104,11 +104,6 @@ const theme = extendTheme(
           borderRadius: "full",
           fontSize: "1.375rem",
           fontWeight: "medium",
-
-          // _hover: {
-          //   bg: 'green.500',
-          //   color: 'white',
-          // },
         },
         // Two sizes: sm and md
         sizes: {
@@ -119,43 +114,28 @@ const theme = extendTheme(
           },
           sm: {
             fontSize: "sm",
-            px: "1.25rem",
-            py: ".625rem",
+            px: 5,
+            py: 5,
           },
           md: {
             fontSize: "md",
-            px: "1.875rem",
-            py: ".9375rem",
+            px: 8,
+            py: 6,
           },
           lg: {
             fontSize: "1.375rem",
-            px: "1.875rem",
-            py: ".9375rem",
+            px: 8,
+            py: 4,
           },
         },
         // Two variants: outline and solid
         variants: {
-          solid: {
-            // bg: 'green',
-            _hover: {
-              boxShadow: "dark",
-              transition: "all 0.2s ease-in-out",
-              transform: "scale(1.01) translateY(-2px)",
-            },
-          },
           outline: {
             // borderWidth: { base: '2px', md: '3px' },
             outline: "none",
             boxShadow: {
               base: "0px 0px 0px 2px #E3000F inset",
               // md: '0px 0px 0px 3px #E3000F inset',
-            },
-            transition: "all 0.3s ease-in-out",
-
-            _hover: {
-              boxShadow: "0px 0px 0px 3px #E3000F inset",
-              transition: "all 0.3s ease-in-out",
-              transform: "scale(1.01) translateY(-2px)",
             },
           },
         },
@@ -227,13 +207,19 @@ const theme = extendTheme(
             fontSize: { base: "xl", lg: "3xl", xl: "4xl" },
           },
           80: {
-            fontSize: { base: "xl", md: "2xl", lg: "5xl", xl: "6xl" },
+            fontSize: {
+              base: "xl",
+              md: "2xl",
+              lg: "4xl",
+              xl: "5xl",
+              "2xl": "6xl",
+            },
           },
           100: {
-            fontSize: { base: "xl", md: "3xl", lg: "7xl", xl: "8xl" },
+            fontSize: { base: "xl", md: "3xl", lg: "7xl", "2xl": "8xl" },
           },
           120: {
-            fontSize: { base: "xl", md: "4xl", lg: "8xl", xl: "10xl" },
+            fontSize: { base: "xl", md: "4xl", lg: "8xl", "2xl": "10xl" },
             lineHeight: { md: "5rem" },
           },
         },

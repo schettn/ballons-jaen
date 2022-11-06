@@ -9,7 +9,7 @@ const Fonts = () => (
         font-weight: 400;
         src: local("red_buttery-webfont"),
           url(/fonts/red_buttery-webfont.woff) format("woff"),
-          url(/fonts/Red_Buttery.woff2) format("woff2");
+          url(/fonts/red_buttery-webfont.woff2) format("woff2");
       }
     `}
   />
