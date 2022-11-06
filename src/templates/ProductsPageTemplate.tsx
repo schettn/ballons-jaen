@@ -8,7 +8,7 @@ import {
 import {PageProps} from 'gatsby'
 import React from 'react'
 
-import {Layout} from '../ShopLayout'
+import {Layout} from '../Layout'
 import {ProductsTemplate} from '../components/templates/ProductsTemplate'
 import {
   ProductsTemplateProps,
@@ -116,7 +116,7 @@ const ProductsPageTemplate = (
 
   return (
     <>
-      <Layout path={props.path}>
+      <Layout pathname={props.path} showNavlinks={false}>
         <ProductsTemplate
           path={props.path}
           products={search.products}

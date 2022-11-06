@@ -14,9 +14,11 @@ import { IoCloseOutline, IoMenuOutline } from "react-icons/io5"
 import { Link } from "gatsby"
 import { navlinks } from "../../../constant/navLink"
 
-interface IMobileNavProps {}
+interface IMobileNavProps {
+  showNavlinks?: boolean
+}
 
-const MobileNav: FC<IMobileNavProps> = () => {
+const MobileNav: FC<IMobileNavProps> = props => {
   const { isOpen, onToggle } = useDisclosure()
   const iconsBtn = [
     {
@@ -33,9 +35,11 @@ const MobileNav: FC<IMobileNavProps> = () => {
     <>
       <Box px="4" boxShadow="dark" pos="relative" bg="white" zIndex="sticky">
         <Flex h="3.75rem" justify="space-between" align="center">
-          <Box fontSize="xl" onClick={onToggle}>
-            {isOpen ? <IoCloseOutline /> : <IoMenuOutline />}
-          </Box>
+          {props.showNavlinks && (
+            <Box fontSize="xl" onClick={onToggle}>
+              {isOpen ? <IoCloseOutline /> : <IoMenuOutline />}
+            </Box>
+          )}
 
           <Box>
             <Image h=".875rem" w="10rem" src="/images/red_logo.png" />

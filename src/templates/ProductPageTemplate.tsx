@@ -8,7 +8,7 @@ import {
 import {graphql, navigate, PageProps} from 'gatsby'
 import React from "react"
 
-import {Layout} from '../ShopLayout'
+import {Layout} from '../Layout'
 import {ProductTemplate} from '../components/templates/ProductTemplate'
 import {buildAllTags} from '../components/templates/ProductsTemplate/ProductsTemplate'
 
@@ -55,7 +55,7 @@ const ProductPageTemplate = (
 
   return (
     <>
-      <Layout path={props.path}>
+      <Layout pathname={props.path} showNavlinks={false}>
         <ProductTemplate
           path={props.path}
           allTags={allTags}

@@ -5,7 +5,7 @@ import {
 } from '@snek-at/gatsby-theme-shopify'
 import {graphql, PageProps} from 'gatsby'
 
-import {Layout} from '../ShopLayout'
+import {Layout} from '../Layout'
 
 const CollectionPageTemplate = (
   props: PageProps<CollectionPageData, ColllectionPageContext>
@@ -34,7 +34,7 @@ const CollectionPageTemplate = (
 
   return (
     <>
-      <Layout path={props.path}>
+      <Layout pathname={props.path} showNavlinks={false}>
         {/* <CollectionTemplate
           path={props.path}
           shopifyCollection={shopifyCollection}
