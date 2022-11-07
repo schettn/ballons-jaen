@@ -2764,10 +2764,10 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
   integrity sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==
 
-"@jaenjs/jaen@^3.0.0-beta.98":
-  version "3.0.0-beta.98"
-  resolved "https://registry.yarnpkg.com/@jaenjs/jaen/-/jaen-3.0.0-beta.98.tgz#9f526d35b7def6e4060042ae54f939f221e05b4f"
-  integrity sha512-kBgUdqtDohFSx+geMZzHH75UUYinkcfLosc7wunZwBWLLB3d9pjr9w2dVjao93GaJCkaUGQ6U0MDO9hE3vSJEQ==
+"@jaenjs/jaen@^3.0.0-beta.99":
+  version "3.0.0-beta.99"
+  resolved "https://registry.yarnpkg.com/@jaenjs/jaen/-/jaen-3.0.0-beta.99.tgz#1576258ca7597ea2a5c8ea25eead67e893a862d4"
+  integrity sha512-Nv04+73ButvtPBSCJ+lAaOPkzJSlnxKtxunXAe8ZiTcLbI7mqM6dRXXWw0mzmRQ3YeELji4tuGN2Can7n4cQUA==
   dependencies:
     "@atlaskit/tree" "^8.4.0"
     "@chakra-ui/icons" "^2.0.11"
