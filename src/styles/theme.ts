@@ -4,6 +4,9 @@ import {
   withDefaultColorScheme,
 } from "@chakra-ui/react"
 
+import { StepsStyleConfig as Steps } from 'chakra-ui-steps';
+
+
 import {theme as jaenTheme} from "@jaenjs/jaen"
 
 export const colors = {
@@ -69,6 +72,7 @@ const theme = extendTheme(
       darker: "0px 4px 10px rgba(0, 0, 0, 0.50) !important",
     },
     components: {
+      Steps,
       Tag: {
         variants: {
           normal: {

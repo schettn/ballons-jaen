@@ -1,7 +1,16 @@
 import React, { useCallback } from "react"
 import { useDropzone } from "react-dropzone"
-import { Center, useColorModeValue, Icon, Box, HStack, IconButton } from "@chakra-ui/react"
+import {
+  Center,
+  useColorModeValue,
+  Icon,
+  Box,
+  HStack,
+  IconButton,
+  VStack,
+} from "@chakra-ui/react"
 import { AiFillFileAdd } from "react-icons/ai"
+import { DeleteIcon } from "@chakra-ui/icons"
 
 export interface FileUploadProps {
   onFilesUploaded: (files: File[]) => void
@@ -12,6 +21,8 @@ export const Dropzone: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     setUploadedFile(acceptedFiles[0])
+
+    onFilesUploaded(acceptedFiles)
   }, [])
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -36,19 +47,26 @@ export const Dropzone: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
     isDragActive ? "teal.500" : "gray.500"
   )
 
-  if(uploadedFile) {
-    return <Box>
-        <HStack>
+  return (
+
+    <VStack>
+       {uploadedFile && (
+        <Box m='4'>
+          <HStack>
             <Icon as={AiFillFileAdd} />
             <Box>{uploadedFile.name}</Box>
 
-            <IconButton aria-label="Remove file" icon={<Icon as={AiFillFileAdd} />} onClick={() => setUploadedFile(null)} />
-        </HStack>
-    </Box>
-  }
+            <IconButton
+              aria-label="Remove file"
+              variant="ghost"
+              icon={<Icon as={DeleteIcon} />}
+              onClick={() => setUploadedFile(null)}
+            />
+          </HStack>
+        </Box>
+      )}
 
-  return (
-    <Center
+<Center
       p={10}
       cursor="pointer"
       bg={isDragActive ? activeBg : "transparent"}
@@ -63,6 +81,8 @@ export const Dropzone: React.FC<FileUploadProps> = ({ onFilesUploaded }) => {
       <Icon as={AiFillFileAdd} mr={2} />
       <p>{dropText}</p>
     </Center>
+    </VStack>
+
   )
 }
 
