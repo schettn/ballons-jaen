@@ -3,17 +3,15 @@ import path from 'path'
 
 import {GatsbyConfig} from 'gatsby'
 
+const {site} = require('./jaen-data/internal.json')
+
+
 dotenv.config()
 
 const config: GatsbyConfig = {
   jsxRuntime: "automatic",
   jsxImportSource: "@emotion/react",
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-  },
+  siteMetadata: site.siteMetadata,
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
@@ -32,7 +30,8 @@ const config: GatsbyConfig = {
           'src/templates/ProductsPageTemplate.tsx'
         )
       }
-    }
+    },
+    "@jaenjs/jaen"
   ],
 }
 
