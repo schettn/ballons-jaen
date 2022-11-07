@@ -5,7 +5,7 @@
  */
 
 import { GatsbySSR } from "gatsby"
-import { RootWrapper } from "./src/chakra/RootWrapper"
+import { RootWrapper } from "./src/Wrapper"
 
 export const onRenderBody: GatsbySSR["onRenderBody"] = ({
   setHtmlAttributes,
