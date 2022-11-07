@@ -3,14 +3,14 @@ import {
   getProductTags,
   ProductPageContext,
   ProductPageData,
-  ProductsPageContext
-} from '@snek-at/gatsby-theme-shopify'
-import {graphql, navigate, PageProps} from 'gatsby'
+  ProductsPageContext,
+} from "@snek-at/gatsby-theme-shopify"
+import { graphql, navigate, PageProps } from "gatsby"
 import React from "react"
 
-import {Layout} from '../ShopLayout'
-import {ProductTemplate} from '../components/templates/ProductTemplate'
-import {buildAllTags} from '../components/templates/ProductsTemplate/ProductsTemplate'
+import { Layout } from "../Layout"
+import { ProductTemplate } from "../components/templates/ProductTemplate"
+import { buildAllTags } from "../components/templates/ProductsTemplate/ProductsTemplate"
 
 const ProductPageTemplate = (
   props: PageProps<
@@ -22,7 +22,7 @@ const ProductPageTemplate = (
     ProductPageContext
   >
 ) => {
-  const {shopifyProduct, relatedProducts, productsPage} = props.data
+  const { shopifyProduct, relatedProducts, productsPage } = props.data
 
   const buildProductPageMeta = () => {
     let title = shopifyProduct.title
@@ -37,11 +37,11 @@ const ProductPageTemplate = (
       image:
         shopifyProduct.featuredMedia?.image.gatsbyImageData.images.fallback
           ?.src,
-      datePublished: shopifyProduct.createdAt
+      datePublished: shopifyProduct.createdAt,
     }
   }
 
-  console.log('shopifyProduct: ', props.data.shopifyProduct)
+  console.log("shopifyProduct: ", props.data.shopifyProduct)
 
   const handleOnGoBack = () => {
     navigate(-1)
@@ -50,12 +50,12 @@ const ProductPageTemplate = (
   const allTags = buildAllTags({
     tags: productsPage.pageContext.tags,
     vendors: productsPage.pageContext.vendors,
-    productTypes: productsPage.pageContext.productTypes
+    productTypes: productsPage.pageContext.productTypes,
   })
 
   return (
     <>
-      <Layout path={props.path}>
+      <Layout pathname={props.path} mode={"store"}>
         <ProductTemplate
           path={props.path}
           allTags={allTags}
@@ -71,16 +71,18 @@ const ProductPageTemplate = (
 }
 
 export const query = graphql`
-  query($productId: String!, $relatedProductIds: [String!]!) {
-    relatedProducts: allShopifyProduct(filter: {id: {in: $relatedProductIds}}) {
+  query ($productId: String!, $relatedProductIds: [String!]!) {
+    relatedProducts: allShopifyProduct(
+      filter: { id: { in: $relatedProductIds } }
+    ) {
       nodes {
         ...shopifyProductData
       }
     }
-    shopifyProduct(id: {eq: $productId}) {
+    shopifyProduct(id: { eq: $productId }) {
       ...shopifyProductData
     }
-    productsPage: sitePage(id: {eq: "SitePage /products"}) {
+    productsPage: sitePage(id: { eq: "SitePage /products" }) {
       pageContext
     }
   }
