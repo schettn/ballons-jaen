@@ -1,43 +1,55 @@
-import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  IconButton,
+  Image,
+  Spacer,
+  Text,
+} from "@chakra-ui/react"
+import { Link, navigate } from "gatsby"
 import { FC } from "react"
 import {
+  AiFillShop,
+  AiOutlineArrowLeft,
   AiOutlineHeart,
   AiOutlineSearch,
+  AiOutlineShop,
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai"
-interface ITopNavProps {}
+import { useBasket } from "../../services/basket"
+import { LayoutMode } from "../../types/commonTypes"
+interface ITopNavProps {
+  mode: LayoutMode
+  onBasketClick?: () => void
+}
 
-const TopNav: FC<ITopNavProps> = () => {
-  const iconsBtn = [
-    {
-      icon: <AiOutlineHeart />,
-      label: "Wishlist",
-    },
-    {
-      icon: <AiOutlineSearch />,
-      label: "Search",
-    },
-    {
-      icon: <AiOutlineShoppingCart />,
-      label: "Cart",
-    },
-    {
-      icon: <AiOutlineUser />,
-      label: "Account",
-    },
-  ]
+const TopNav: FC<ITopNavProps> = ({ mode, onBasketClick }) => {
 
   return (
     <Flex
       h={{ sm: 20, md: 16 }}
-      align="center"
+      py={2}
+      justifyContent={"center"}
+      alignItems="center"
       px="8"
-      justify="space-between"
       bg="#f4f4f4"
     >
-      <Box w="15.625rem" display={{ base: "none", xl: "block" }}></Box>
-      <Box as="span" justifySelf="center">
+      <Button
+        position={"absolute"}
+        left={2}
+        size={"sm"}
+        as={Link}
+        to="/"
+        display={mode === "website" ? "none" : undefined}
+        leftIcon={<AiOutlineArrowLeft />}
+      >
+        Zur Website
+      </Button>
+
+      <Box>
         <Image
           w={{ base: "20rem", lg: "26.25rem" }}
           h={{ base: "1.875rem", lg: "2.125rem" }}
@@ -45,19 +57,29 @@ const TopNav: FC<ITopNavProps> = () => {
           alt="logo"
         />
       </Box>
-      <HStack gap="2" justifySelf="end">
-        {iconsBtn.map((iconBtn, index) => {
-          return (
-            <Box
-              fontSize={{ base: "lg", xl: "xl" }}
-              key={index}
-              cursor="pointer"
+
+      <HStack position={"absolute"} right={2}>
+        {mode === "website" ? (
+          <Button
+            size={"sm"}
+            as={Link}
+            to="/products"
+            leftIcon={<AiOutlineShop />}
+          >
+            Unsere Produkte
+          </Button>
+        ) : (
+          <>
+            <Button
+              size={"xs"}
+              variant="outline"
+              leftIcon={<AiOutlineShoppingCart />}
+              onClick={onBasketClick}
             >
-              {iconBtn.icon}
-            </Box>
-          )
-        })}
-        <Text fontSize={{ base: "sm", xl: "md" }}> € 0.00 *</Text>
+              Warenkorb
+            </Button>
+          </>
+        )}
       </HStack>
     </Flex>
   )

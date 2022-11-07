@@ -458,7 +458,7 @@ export default function ProductsPageShell(
       <Box w="100%" h="100%">
         <Flex
           px={{ base: "4", md: "6" }}
-          py="2"
+          py={{ base: "4", md: "6" }}
           borderBottom="1px"
           borderBottomColor={useColorModeValue("gray.200", "gray.700")}
         >

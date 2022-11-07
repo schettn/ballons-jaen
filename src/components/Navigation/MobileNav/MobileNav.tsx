@@ -1,57 +1,79 @@
 import {
   Box,
+  Button,
   Divider,
   Flex,
   HStack,
+  IconButton,
   Image,
   Link as CLink,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react"
 import { FC } from "react"
-import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
+import {
+  AiOutlineArrowLeft,
+  AiOutlineShop,
+  AiOutlineShoppingCart,
+  AiOutlineUser,
+} from "react-icons/ai"
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5"
 import { Link } from "gatsby"
 import { navlinks } from "../../../constant/navLink"
+import { LayoutMode } from "../../../types/commonTypes"
 
 interface IMobileNavProps {
-  showNavlinks?: boolean
+  mode?: LayoutMode
+  onBasketClick: () => void
 }
 
-const MobileNav: FC<IMobileNavProps> = props => {
+const MobileNav: FC<IMobileNavProps> = ({ mode, onBasketClick }) => {
   const { isOpen, onToggle } = useDisclosure()
-  const iconsBtn = [
-    {
-      icon: <AiOutlineUser />,
-      label: "Account",
-    },
-    {
-      icon: <AiOutlineShoppingCart />,
-      label: "Cart",
-    },
-  ]
 
   return (
     <>
-      <Box px="4" boxShadow="dark" pos="relative" bg="white" zIndex="sticky">
+      <Box px="4" boxShadow={
+        mode === "website" ? "dark" : "light"
+      } pos="relative" bg="white" zIndex="sticky">
         <Flex h="3.75rem" justify="space-between" align="center">
-          {props.showNavlinks && (
+          {mode === "website" ? (
             <Box fontSize="xl" onClick={onToggle}>
               {isOpen ? <IoCloseOutline /> : <IoMenuOutline />}
             </Box>
+          ) : (
+            <Button
+              as={Link}
+              to="/"
+              leftIcon={<AiOutlineArrowLeft />}
+              variant="link"
+              size='xs'
+            >
+              Zur Website
+            </Button>
           )}
 
           <Box>
             <Image h=".875rem" w="10rem" src="/images/red_logo.png" />
           </Box>
           <HStack gap="0" justifySelf="end">
-            {iconsBtn.map((iconBtn, index) => {
-              return (
-                <Box fontSize="lg" key={index}>
-                  {iconBtn.icon}
-                </Box>
-              )
-            })}
+            {mode === "website" ? (
+              <Button
+                size={"sm"}
+                as={Link}
+                to="/products"
+                leftIcon={<AiOutlineShop />}
+              >
+                Unsere Produkte
+              </Button>
+            ) : (
+              <>
+                <IconButton
+                  variant="ghost"
+                  icon={<AiOutlineShoppingCart />}
+                  aria-label="Warenkorb"
+                />
+              </>
+            )}
           </HStack>
         </Flex>
         {isOpen && (

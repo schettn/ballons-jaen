@@ -10,3 +10,5 @@ export interface ICardData {
   title?: string
   text?: string
 }
+
+export type LayoutMode = 'website' | 'store'

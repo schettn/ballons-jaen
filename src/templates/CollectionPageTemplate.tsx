@@ -34,7 +34,7 @@ const CollectionPageTemplate = (
 
   return (
     <>
-      <Layout pathname={props.path} showNavlinks={false}>
+      <Layout pathname={props.path} mode={'store'}>
         {/* <CollectionTemplate
           path={props.path}
           shopifyCollection={shopifyCollection}
