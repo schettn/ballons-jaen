@@ -1,5 +1,5 @@
 {
-  "name": "shopify-admin",
+  "name": "@snek-functions/shopify-admin",
   "version": "0.0.1",
   "private": true,
   "main": "dist/index.js",
@@ -13,7 +13,9 @@
     }
   },
   "dependencies": {
-    "@snek-at/functions": "*"
+    "@snek-at/functions": "*",
+    "@types/file-saver": "^2.0.5",
+    "file-saver": "^2.0.5"
   },
   "devDependencies": {
     "commitizen": "^4.2.5",

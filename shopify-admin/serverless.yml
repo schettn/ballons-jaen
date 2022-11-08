@@ -21,9 +21,11 @@ provider:
   name: aws
   region: eu-central-1
 
+  timeout: 900
+
   environment:
     CODESPACE_NAME: ${env:CODESPACE_NAME, ""}
-    MYSHOPIFY_URL:  ${env:MYSHOPIFY_URL, ""}
+    SHOPIFY_URL_WHITELIST:  ${env:SHOPIFY_URL_WHITELIST, ""}
 
   ecr:
     images:

@@ -12,11 +12,13 @@
     "@fontsource/poppins": "^4.5.10",
     "@jaenjs/jaen": "^3.0.0-beta.99",
     "@react-icons/all-files": "^4.1.0",
-    "@shopify/shopify-api": "^5.2.0",
     "@snek-at/gatsby-theme-shopify": "^1.7.13",
     "@snek-at/uikit": "^1.1.0",
+    "@snek-functions/shopify-admin": "./shopify-admin/",
     "chakra-react-select": "^4.4.0",
     "chakra-ui-steps": "^1.8.0",
+    "exceljs": "^4.3.0",
+    "file-saver": "^2.0.5",
     "framer-motion": "^7.6.3",
     "gatsby": "^4.24.6",
     "gatsby-plugin-image": "^2.24.0",
@@ -32,7 +34,6 @@
     "react-simple-image-viewer": "^1.2.2",
     "react-slick": "^0.29.0",
     "sharp": "^0.31.2",
-    "shopify-admin": "./shopify-admin/",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
